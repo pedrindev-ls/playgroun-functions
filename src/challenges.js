@@ -13,8 +13,8 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  return string.split(" ")
 }
 
 // Desafio 4
@@ -34,7 +34,7 @@ function highestCount(array) {
   let cont = 0;
   for(let i = 0; i <bom.lenght; i++){
     if(bom[(bom.length - 1)] === bom[i]){
-      cont = cont + 1
+      cont += 1
     }
   }
   return cont
