@@ -34,17 +34,17 @@ function highestCount(array) {
   let cont = 0;
   for(let i = 0; i <bom.lenght; i++){
     if(bom[(bom.length - 1)] === bom[i]){
-      cont =+1
+      cont = cont + 1
     }
   }
   return cont
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2,) {
-  let dis1 = mouse - cat1
-  let dis2 = mouse - cat2
-  if (Math.abs(dis1) === Math.abs(dis2)){
+function catAndMouse(mouse, cat1, cat2) {
+  let dis1 = Math.abs(mouse - cat1)
+  let dis2 = Math.abs(mouse - cat2)
+  if (dis1 === dis2){
     return 'os gatos trombam e o rato foge'
   } else if (dis2 > dis1){
     return 'cat1'
