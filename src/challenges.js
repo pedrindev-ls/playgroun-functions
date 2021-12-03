@@ -71,38 +71,42 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
+  let palav = ''
   for (let i = 0; i < string.length; i++){
-    string.split('')
     if(string[i] == 'a'){
-      string.replace(string[i], 1)
+      palav += '1'
     } else if (string[i] == 'e'){
-      string.replace(string[i], 2)
+      palav += '2'
     } else if (string[i] == 'i'){
-      string.replace(string[i], 3)
+      palav += '3'
     } else if (string[i] == 'o'){
-      string.replace(string[i], 4)
+      palav += '4'
     } else if (string[i] == 'u'){
-      string.replace(string[i], 5) 
+      palav += '5' 
+    } else {
+      palav += string[i]
     }
-    return string 
   }
+  return palav 
 }
 function decode(string) {
-  //string.split('')
+  let palav = ''
   for (let i = 0; i < string.length; i++){
     if(string[i] == '1'){
-      string.replace(string[i], 'a')
+      palav += 'a'
     } else if (string[i] == '2'){
-      string.replace(string[i], 'e')
+      palav += 'e'
     } else if (string[i] == '3'){
-      string.replace(string[i], 'i')
+      palav += 'i'
     } else if (string[i] == '4'){
-      string.replace(string[i], 'o')
+      palav += 'o'
     } else if (string[i] == '5'){
-      string.replace(string[i], 'u')
+      palav += 'u' 
+    } else {
+      palav += string[i]
     }
-    return string
-  }  
+  }
+  return palav 
 }
 
 module.exports = {
