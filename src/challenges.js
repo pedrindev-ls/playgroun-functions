@@ -29,15 +29,22 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  
+function highestCount(array) {
+  const bom = array.sort()
+  let cont = 0;
+  for(let i = 0; i <bom.lenght; i++){
+    if(bom[(bom.length - 1)] === bom[i]){
+      cont =+1
+    }
+  }
+  return cont
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2,) {
-  let dis1 = cat1 - mouse
-  let dis2 = cat2 - mouse
-  if (dis1 === dis2){
+  let dis1 = mouse - cat1
+  let dis2 = mouse - cat2
+  if (Math.abs(dis1) === Math.abs(dis2)){
     return 'os gatos trombam e o rato foge'
   } else if (dis2 > dis1){
     return 'cat1'
@@ -65,35 +72,37 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   for (let i = 0; i < string.length; i++){
-    if(string[i] === 'a'){
+    string.split('')
+    if(string[i] == 'a'){
       string.replace(string[i], 1)
-    } else if (string[i] === 'e'){
+    } else if (string[i] == 'e'){
       string.replace(string[i], 2)
-    } else if (string[i] === 'i'){
+    } else if (string[i] == 'i'){
       string.replace(string[i], 3)
-    } else if (string[i] === 'o'){
+    } else if (string[i] == 'o'){
       string.replace(string[i], 4)
-    } else if (string[i] === 'u'){
-      string.replace(string[i], 5)
+    } else if (string[i] == 'u'){
+      string.replace(string[i], 5) 
     }
+    return string 
   }
-  return string 
 }
 function decode(string) {
+  //string.split('')
   for (let i = 0; i < string.length; i++){
-    if(string[i] === '1'){
+    if(string[i] == '1'){
       string.replace(string[i], 'a')
-    } else if (string[i] === '2'){
+    } else if (string[i] == '2'){
       string.replace(string[i], 'e')
-    } else if (string[i] === '3'){
+    } else if (string[i] == '3'){
       string.replace(string[i], 'i')
-    } else if (string[i] === '4'){
+    } else if (string[i] == '4'){
       string.replace(string[i], 'o')
-    } else if (string[i] === '5'){
+    } else if (string[i] == '5'){
       string.replace(string[i], 'u')
     }
-  } 
-  return string 
+    return string
+  }  
 }
 
 module.exports = {
