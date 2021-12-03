@@ -5,10 +5,15 @@ function techList() {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  if (array.lenght !== 11){
-    return 'Array com tamanho incorreto.'
-  }
-  
+  for (let i = 0; i < array.length; i++){
+    if (array[i] < 0 || array.length > 9){
+      return 'não é possível gerar um número de telefone com esses valores'
+    }
+}
+if (array.lenght !== 11){
+  return 'Array com tamanho incorreto.'
+}
+let repete = 0;
 }
 
 // Desafio 12
