@@ -1,6 +1,9 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(obj) {
+  obj.tech = {
+    tech:tech,
+    name:nome,
+  }
 }
 
 // Desafio 11
