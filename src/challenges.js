@@ -30,11 +30,13 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  const bom = array.sort()
+  const ordem = array.sort(function(a, b){return a-b}/*Site de Referência: https://www.w3schools.com/jsref/jsref_sort.asp*/)
   let cont = 0;
-  for(let i = 0; i <bom.lenght; i++){
-    if(bom[(bom.length - 1)] === bom[i]){
-      cont += 1
+  let best = ordem[ordem.length - 1]
+  for (let i = 0; i < ordem.length; i++){
+    let funciona = ordem[i]
+    if(best === funciona){
+      cont = cont + 1
     }
   }
   return cont
